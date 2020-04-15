@@ -26,6 +26,9 @@ class AppKernel extends Kernel
             new CampsBundle\CampsBundle(),
             new Ob\HighchartsBundle\ObHighchartsBundle(),
             new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
+            new Ob\HighchartsBundle\ObHighchartsBundle(),
+
+
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

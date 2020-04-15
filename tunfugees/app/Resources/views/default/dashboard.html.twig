@@ -181,8 +181,8 @@
                 <span class=" bg-success  icon-thumbnail">Stk</span>
             </li>
                     <li>
-                        <a href="#"><span class="title" >Commandes</span></a>
-                        <span class=" bg-success  icon-thumbnail">Cmd</span>
+                        <a href="{{ path('da_show_commande') }}"><span class="title" >Commandes</span></a>
+                        <span class="{% if path('da_show_commande') == currentPath %}bg-success{% endif %} icon-thumbnail">Cmd</span>
                     </li>
                     <li class="" style="padding: 10px 5px;">
                         <a href="{{ path('Ca_camps_index') }}"><span class="title">Camps</span></a>
@@ -218,7 +218,7 @@
             <div class="dropdown pull-right">
                 <button class="profile-dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="thumbnail-wrapper d32 circular inline sm-m-r-5">
-                <img src="{{ asset('assets/img/profiles/avatar.jpg') }}" alt="" width="32" height="32">
+                <img src="{{ asset('uploads/user/photo/' ~ app.user.photo) }}" alt="" width="32" height="32">
                 </span>
                 </button>
                 <div class="dropdown-menu dropdown-menu-right profile-dropdown" role="menu">
