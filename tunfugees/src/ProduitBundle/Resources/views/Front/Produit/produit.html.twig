@@ -12,12 +12,12 @@ Produits
     <script>
         $(document).ready(function () {
             $(".jaime").click(function () {
-                var id = $(this).val();
+                var idProd = $(this).val();
                 $.ajax({
                     dataType: "json",
                     url: "{{ path("f_annonce_jaime") }}",
                     data: {
-                        "Id": id
+                        "Id": idProd
                     },
                     success: function (data) {
                         $(".jaime").hide();
@@ -45,6 +45,8 @@ Produits
             });
         });
     </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="{{ asset('bundles/starrating/js/rating.js') }}"></script>
 {% endblock %}
 {% block body %}
     <div class="bread-crumb">
@@ -53,8 +55,9 @@ Produits
             <div class="matter">
                 <h2>shop</h2>
                 <ul class="list-inline">
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">shop</a></li>
+                    <li><a href="{{ path('homepage') }}">HOME</a></li>
+                    <li><a href="{{ path('f_annonce_index') }}">shop</a></li>
+
                 </ul>
             </div>
         </div>
@@ -64,108 +67,75 @@ Produits
             <div class="row">
                 <div class="col-md-3 col-sm-3 col-xs-12 hidden-xs">
                     <div class="leftside">
-                        <form class="form-horizontal search" method="post">
-                            <fieldset>
+                        <form role ="form" class="form-horizontal search" >
+
                                 <div class="form-group">
-                                    <input name="s" value="" class="form-control" type="text" placeholder="Search">
+                                    <input  class="form-control" type="search" placeholder="Search">
                                 </div>
-                                <button type="submit" value="submit" class="btn"><i class="icon_search" aria-hidden="true"></i></button>
-                            </fieldset>
+
+
                         </form>
                     </div>
                     <div class="leftside">
                         <h5>category</h5>
                         <div class="category">
                             <div class="panel-group" id="accordion">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Men's</a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapse1" class="panel-collapse collapse ">
-                                        <ul class="list-group list-unstyled">
-                                            <li><a href="#"><i class="fa fa-angle-right"></i> Title Name</a></li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i> Title Name</a></li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i> Title Name</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                                 <div class="panel panel-default active">
                                     <div class="panel-heading">
                                         <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Girl's</a>
+                                            <a  href="{{ path('f_annonce_index') }}">All</a>
                                         </h4>
                                     </div>
-                                    <div id="collapse2" class="panel-collapse collapse in">
-                                        <ul class="list-group list-unstyled">
-                                            <li><a href="#"><i class="fa fa-angle-right"></i> Title Name</a></li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i> Title Name</a></li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i> Title Name</a></li>
-                                        </ul>
-                                    </div>
+
                                 </div>
-                                <div class="panel panel-default">
+                                {% for c in categories %}
+                                <div class="panel panel-default active">
                                     <div class="panel-heading">
                                         <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Accessories</a>
+                                            <a  href="{{ path('f_recherch_Categorie', { 'cat': c.id }) }}">{{ c.libelle }}</a>
                                         </h4>
                                     </div>
-                                    <div id="collapse3" class="panel-collapse collapse">
-                                        <ul class="list-group list-unstyled">
-                                            <li><a href="#"><i class="fa fa-angle-right"></i> Title Name</a></li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i> Title Name</a></li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i> Title Name</a></li>
-                                        </ul>
-                                    </div>
+
                                 </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Others</a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapse4" class="panel-collapse collapse">
-                                        <ul class="list-group list-unstyled">
-                                            <li><a href="#"><i class="fa fa-angle-right"></i> Title Name</a></li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i> Title Name</a></li>
-                                            <li><a href="#"><i class="fa fa-angle-right"></i> Title Name</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
+
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
-                    <div class="leftside">
+
+
+
+
+
+
+                    {% if liste|length > 0 %}
+
+
+                        <div class="leftside">
                         <h5>your cart</h5>
+                            {% for value in liste %}
                         <ul class="list-unstyled cart">
                             <li>
-                                <a href="#"><img src="images/product/thumb1.jpg" alt="thumb" title="thumb" class="img-responsive"></a>
-                                <h4>Title</h4>
-                                <p>1 x $ 45.00</p>
+                                <a href="#"><img src="{{ asset('uploads/Produit/photo/' ~ value.img) }}" width="32" height="32" alt="thumb" title="thumb" class="img-responsive"></a>
+                                <h4>{{ value.nomProd }}</h4>
+                                <p>{{ value.prix }} DT</p>
                             </li>
+
+                            {% endfor %}
                             <li>
-                                <a href="#"><img src="images/product/thumb2.jpg" alt="thumb" title="thumb" class="img-responsive"></a>
-                                <h4>Title</h4>
-                                <p>1 x $ 45.00</p>
-                            </li>
-                            <li>
-                                <h4>Subtotal : <span>$ 135.00</span></h4>
-                                <button class="btn-primary" type="button" onclick="location.href='checkout.html'">checkout</button> </li>
-                        </ul>
-                    </div>
-                    <div class="leftside">
-                        <h5>Price</h5>
-                        <div class="form-group prices">
-                            <div class="price-filter">
-                                <span class="min">$15</span>
-                                <a href="#" class="one slider-handle"></a>
-                                <div class="price-range"><div class="bg"></div></div>
-                                <span class="max">$1500</span>
-                                <a href="#" class="two slider-handle"></a>
-                            </div>
-                        </div>
-                    </div>
+                                <h4>Subtotal : <span> DT</span></h4>
+                                <button class="btn-primary" type="button" onclick="location.href='{{ path('panier_show') }}'">checkout</button> </li>
+                             </ul>
+                           </div>
+
+                    {% endif %}
+
+
+
+
+
+
+
 
                 </div>
 
@@ -180,8 +150,9 @@ Produits
                         <div class="col-md-3 col-sm-4 col-xs-12 paddright">
                             <div class="form-group input-group input-group-sm">
                                 <select id="input-limit" class="form-control selectpicker bs-select-hidden" onchange="location = this.value;">
-                                    <option value="{{ path('f_annonce_trier', { 'val': 'PE' }) }}" >Prix elever</option>
-                                    <option value="{{ path('f_annonce_trier', { 'val': 'PB' }) }}">Prix Bas</option>
+                                    <option value="{{ path('f_annonce_index') }}">Default Sorting </option>
+                                    <option value="{{ path('f_annonce_trier', { 'val': 'PB' }) }}">Ascending Price</option>
+                                    <option value="{{ path('f_annonce_trier', { 'val': 'PE' }) }}" >Descending Price</option>
 
                                 </select>
                             </div>
@@ -195,7 +166,7 @@ Produits
                                 <div class="product-thumb">
                                     <div class="image">
                                         {% if a.img != '' %}
-                                            <a href="{{ path('f_annonce_show', { 'id': a.idprod }) }}"><img src="{{ asset('images/product/' ~ a.img) }}" alt="image" title="image" class="img-responsive" /></a>
+                                            <a href="{{ path('f_annonce_show', { 'id': a.idprod }) }}"><img src="{{ asset('uploads/Produit/photo/' ~ a.img) }}" width="270" height="328" alt="image" title="image" class="img-responsive" /></a>
                                         {% else %}
                                             <img alt="image"
                                                  src="{{ asset('assets/img/NA.png') }}"
