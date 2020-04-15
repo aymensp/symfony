@@ -16,7 +16,6 @@ namespace ProduitBundle\Controller\Front;
 use ProduitBundle\Entity\Commande;
 
 use ProduitBundle\Entity\LigneCommande;
-use Symfony\Component\Validator\Constraints\DateTime;
 use UserBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
@@ -30,49 +29,7 @@ use Symfony\Component\Config\Definition\Exception\Exception;
 
 class CommandeController extends Controller
 {
-    /**
-     * Finds and displays a user entity.
-     *
-     * @Route("/pay/{id_c}", name="payer_commande")
-     * @Method("GET")
-     */
-public function payAction($id_c)
-{
-    $em=$this->getDoctrine()->getManager();
-    $commandes = $em->getRepository('ProduitBundle:Commande')->findAll();
 
-
-    foreach ($commandes as $value)
-    {
-        if($value->getId()==$id_c)
-        {
-            $etat="Payeé";
-            $prix=$value->getPrixtotal();
-            $value->setEtatCommande($etat);
-            $em->persist($value);
-            $em->flush();
-
-            \Stripe\Stripe::setApiKey('sk_test_rR8VRX6Jm99hnqLV1XMHDl3a00EOJxQSqo');
-
-// Token is created using Stripe Checkout or Elements!
-// Get the payment token ID submitted by the form:
-            $token = $_POST['stripeToken'];
-            $charge = \Stripe\Charge::create([
-                'amount' => $prix*100,
-                'currency' => 'usd',
-                'description' => 'Example charge',
-                'source' => $token,
-            ]);
-        }
-
-    }
-    $commandes = $em->getRepository('ProduitBundle:Commande')->findAll();
-    return $this->render('@Produit/Front/Commande/page_index_commande.html.twig', array(
-        'commandes'=> $commandes
-    ));
-
-
-}
     /**
      * Finds and displays a user entity.
      *
@@ -104,7 +61,7 @@ public function payAction($id_c)
              $Ligne_commande=new LigneCommande();
              $prix=$article_panier->getPrix();
              $id_produit=$article_panier->getIdprod();
-             $Ligne_commande->setIdprod($id_produit);
+             $Ligne_commande->getIdprod($id_produit);
              $Ligne_commande->setPrixprod($prix);
              $Ligne_commande->setIdUtilisateur($id_u);
              $Ligne_commande->setIdCommande($id_com);
@@ -124,7 +81,7 @@ public function payAction($id_c)
         $commandes = $em->getRepository('ProduitBundle:Commande')->findAll();
         $lignes = $em->getRepository('ProduitBundle:LigneCommande')->findAll();
             $produits = $em->getRepository('ProduitBundle:Produits')->findAll();
-         return $this->render('@Produit/Front/Commande/page_index_commande.html.twig',array(
+         return $this->render('@Produit/DashboardUser/page_index_commande.html.twig',array(
              'commandes'=> $commandes,'lignes'=> $lignes,'produits'=> $produits));
 
 
@@ -190,7 +147,7 @@ public function payAction($id_c)
 
         }
         $commandes = $em->getRepository('ProduitBundle:Commande')->findAll();
-        return $this->render('@Produit/Front/Commande/page_index_commande.html.twig', array(
+        return $this->render('@Produit/DashboardUser/page_index_commande.html.twig', array(
             'commandes'=> $commandes
         ));
 
@@ -223,7 +180,7 @@ public function payAction($id_c)
     {
         $em=$this->getDoctrine()->getManager();
         $commandes = $em->getRepository('ProduitBundle:Commande')->findAll();
-        return $this->render('@Produit/Front/Commande/page_index_commande.html.twig', array(
+        return $this->render('@Produit/DashboardUser/page_index_commande.html.twig', array(
             'commandes'=> $commandes
         ));
     }

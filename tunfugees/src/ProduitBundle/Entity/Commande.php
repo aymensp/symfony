@@ -30,9 +30,9 @@ class Commande
     private $etatCommande;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="date_emission", type="datetime", length=30, nullable=false)
+     * @ORM\Column(name="date_emission", type="string", length=30, nullable=false)
      */
     private $dateEmission;
 
@@ -83,7 +83,7 @@ class Commande
     }
 
     /**
-     * @return \DateTime
+     * @return string
      */
     public function getDateEmission()
     {
@@ -91,7 +91,7 @@ class Commande
     }
 
     /**
-     * @param \DateTim $dateEmission
+     * @param string $dateEmission
      */
     public function setDateEmission($dateEmission)
     {

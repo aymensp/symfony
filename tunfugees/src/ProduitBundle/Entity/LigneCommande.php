@@ -20,35 +20,35 @@ class LigneCommande
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    public $id;
+    private $id;
 
     /**
      * @var integer
      *
      * @ORM\Column(name="id_commande", type="integer", nullable=false)
      */
-    public $idCommande;
+    private $idCommande;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="idProd", type="integer", nullable=false,unique=true)
+     * @ORM\Column(name="idProd", type="integer", nullable=false)
      */
-    public $idprod;
+    private $idprod;
 
     /**
      * @var integer
      *
      * @ORM\Column(name="id_utilisateur", type="integer", nullable=false)
      */
-    public $idUtilisateur;
+    private $idUtilisateur;
 
     /**
      * @var float
      *
      * @ORM\Column(name="prixProd", type="float", precision=10, scale=0, nullable=false)
      */
-    public $prixprod;
+    private $prixprod;
 
     /**
      * @return int

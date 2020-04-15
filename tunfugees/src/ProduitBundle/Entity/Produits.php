@@ -4,16 +4,13 @@ namespace ProduitBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
-use Symfony\Component\HttpFoundation\File\UploadedFile;
-use Vich\UploaderBundle\Mapping\Annotation as Vich;
-use Vich\UploaderBundle\Form\Type\VichFileType;
-use Symfony\Component\Validator\Constraints as Assert;
 
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Produits
  *
- * @ORM\Table(name="produits")
- * @Vich\Uploadable
+ * @ORM\Table(name="produits", uniqueConstraints={@ORM\UniqueConstraint(name="nomProd", columns={"nomProd"})})
  * @ORM\Entity
  * @ORM\Entity(repositoryClass="ProduitBundle\Repository\ProduitsRepository")
  */
@@ -32,8 +29,6 @@ class Produits
      * @var string
      *
      * @ORM\Column(name="nomProd", type="string", length=30, nullable=false)
-     *
-     * @Assert\NotBlank
      */
     private $nomprod;
 
@@ -41,44 +36,27 @@ class Produits
      *
      * @ORM\ManyToOne(targetEntity="Categorie")
      * @ORM\JoinColumn(name="categorie_id", referencedColumnName="id"   )
-     *
      */
-    private $categorie;
+    private $categorie_id;
     /**
      * @var string
      *
      * @ORM\Column(name="nomRef", type="string", length=30, nullable=false)
-     * @Assert\NotBlank
      */
     private $nomref;
 
-    /**
-     * @Vich\UploadableField(mapping="produit_photo", fileNameProperty="img")
-     *
-     * @var File
-     */
-    private  $produitPhoto;
+
     /**
      * @var string
      *
      * @ORM\Column(name="img", type="string", length=200, nullable=false)
-     *
-     *
      */
     private $img;
-    /**
-     * @ORM\Column(type="datetime",nullable=true)
-     *
-     * @var \DateTime
-     */
-    private $photoUpdatedAt;
+
     /**
      * @var integer
      *
      * @ORM\Column(name="prix", type="integer", nullable=false)
-     *
-     * @Assert\NotNull
-     * @Assert\GreaterThan("0")
      */
     private $prix;
 
@@ -93,8 +71,6 @@ class Produits
      * @var string
      *
      * @ORM\Column(name="description", type="string", length=200, nullable=false)
-     *
-     * @Assert\NotBlank
      */
     private $description;
 
@@ -147,23 +123,18 @@ class Produits
     /**
      * @return mixed
      */
-    public function getCategorie()
+    public function getCategorieId()
     {
-        return $this->categorie;
+        return $this->categorie_id;
     }
 
     /**
-     * @param mixed $categorie
+     * @param mixed $categorie_id
      */
-    public function setCategorie($categorie)
+    public function setCategorieId($categorie_id)
     {
-        $this->categorie = $categorie;
+        $this->categorie_id = $categorie_id;
     }
-
-    /**
-     * @return mixed
-     */
-
 
     /**
      * @return string
@@ -275,41 +246,6 @@ class Produits
     public function setViews($views)
     {
         $this->views = $views;
-    }
-
-    /**
-     * @return File
-     */
-    public function getProduitPhoto()
-    {
-        return $this->produitPhoto;
-    }
-
-    /**
-     * @param File $produitPhoto
-     */
-    public function setProduitPhoto($produitPhoto)
-    {
-        $this->produitPhoto = $produitPhoto;
-        if ($produitPhoto instanceof UploadedFile) {
-            $this->setPhotoUpdatedAt(new \DateTime());
-        }
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getPhotoUpdatedAt()
-    {
-        return $this->photoUpdatedAt;
-    }
-
-    /**
-     * @param \DateTime $photoUpdatedAt
-     */
-    public function setPhotoUpdatedAt($photoUpdatedAt)
-    {
-        $this->photoUpdatedAt = $photoUpdatedAt;
     }
 
 
