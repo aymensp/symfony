@@ -5,6 +5,7 @@
         "This file is @generated automatically"
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
     "content-hash": "7570d3a42f52d0a8e5b0e25a117dad7f",
 =======
 <<<<<<< HEAD
@@ -13,6 +14,9 @@
     "content-hash": "15ae4a5ac28514ba8e318e946955a1d5",
 >>>>>>> 3b16093bef1560239a7e5cf6f039da88064fd5cc
 >>>>>>> 499ad228a9878b12738f19b7ae41d46721faeb2e
+=======
+    "content-hash": "7570d3a42f52d0a8e5b0e25a117dad7f",
+>>>>>>> eya
     "packages": [
         {
             "name": "adesigns/calendar-bundle",

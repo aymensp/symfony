@@ -5,9 +5,12 @@ imports:
     - { resource: "@UserBundle/Resources/config/services.yml" }
     - { resource: "@ProduitBundle/Resources/config/services.yml" }
     - { resource: "@EventBundle/Resources/config/services.yml" }
+<<<<<<< HEAD
     - { resource: "@RefugiesBundle/Resources/config/services.yml" }
     - { resource: "@CampsBundle/Resources/config/services.yml" }
     - { resource: "@MessageBundle/Resources/config/services.yml" }
+=======
+>>>>>>> eya
 
 
 # Put parameters here that don't need to change on each machine where the app is deployed
@@ -15,7 +18,10 @@ imports:
 parameters:
     locale: en
     image_directory: '%kernel.project_dir%/web/uploads/image'
+<<<<<<< HEAD
     image_directory: '%kernel.project_dir%/web/images/refugies'
+=======
+>>>>>>> eya
 
 framework:
     #esi: ~
