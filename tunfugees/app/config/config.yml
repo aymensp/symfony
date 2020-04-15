@@ -4,12 +4,15 @@ imports:
     - { resource: services.yml }
     - { resource: "@UserBundle/Resources/config/services.yml" }
     - { resource: "@ProduitBundle/Resources/config/services.yml" }
+    - { resource: "@RefugiesBundle/Resources/config/services.yml" }
+    - { resource: "@CampsBundle/Resources/config/services.yml" }
 
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: en
+    image_directory: '%kernel.project_dir%/web/images/refugies'
 
 framework:
     #esi: ~
@@ -109,3 +112,12 @@ vich_uploader:
             inject_on_load:     false
             delete_on_update:   true
             delete_on_remove:   true
+knp_snappy:
+    pdf:
+        enabled:    true
+        binary:     /usr/local/bin/wkhtmltopdf #"\"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe\"" for Windows users
+        options:    []
+    image:
+        enabled:    true
+        binary:     /usr/local/bin/wkhtmltoimage #"\"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltoimage.exe\"" for Windows users
+        options:    []

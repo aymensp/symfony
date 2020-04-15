@@ -164,7 +164,7 @@
                                             <div class="dropdown-inner">
                                                 <ul class="list-unstyled">
                                                     <li><a href="our-donators.html">Our Donators</a></li>
-                                                    <li><a href="our-volunteer.html">Our Volunteers</a></li>
+                                                    <li><a href="{{ path ('front_evenements_index') }}">Our Refugees</a></li>
                                                     <li><a href="volunteer-profile.html">Volunteer Profile</a></li>
                                                     <li><a href="make-an-donation.html">Make An donation</a></li>
                                                     <li><a href="become-a-volunteers.html">Become A Volunteers</a></li>
@@ -228,8 +228,8 @@
                         </div>
                         {% else %}
 
-                        <button type="button" class="btn btn-default btn-lg" onclick="location.href=' {{ path('fos_user_security_login') }}'">Donate Now <i class="icon_like_alt" aria-hidden="true"></i></button>
-                        <button type="button" class="btn btn-primary btn-lg" onclick="location.href=' {{ path('inscription') }}'">Become Volunter </button>
+                        <button type="button" class="btn btn-default btn-lg" onclick="location.href=' {{ path('fos_user_security_login') }}'">Log in  <i class="icon_like_alt" aria-hidden="true"></i></button>
+                        <button type="button" class="btn btn-primary btn-lg" onclick="location.href=' {{ path('inscription') }}'"> Sign up  </button>
                         {% endif %}
                     </div>
                 </div>
