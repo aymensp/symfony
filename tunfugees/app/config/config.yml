@@ -7,6 +7,7 @@ imports:
     - { resource: "@EventBundle/Resources/config/services.yml" }
     - { resource: "@RefugiesBundle/Resources/config/services.yml" }
     - { resource: "@CampsBundle/Resources/config/services.yml" }
+    - { resource: "@MessageBundle/Resources/config/services.yml" }
 
 
 # Put parameters here that don't need to change on each machine where the app is deployed
@@ -69,7 +70,7 @@ doctrine:
 
 # Swiftmailer Configuration
 swiftmailer:
-    transport: '%mailer_transport%'
+    transport: gmail
     host: '%mailer_host%'
     username: '%mailer_user%'
     password: '%mailer_password%'
@@ -104,6 +105,8 @@ knp_paginator:
         filtration: '@KnpPaginator/Pagination/filtration.html.twig'  # filters template
 
 
+
+
 vich_uploader:
     db_driver: orm
     mappings:
@@ -133,4 +136,6 @@ knp_snappy:
             inject_on_load:     false
             delete_on_update:   true
             delete_on_remove:   true
+
+
 

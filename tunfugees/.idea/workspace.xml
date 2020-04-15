@@ -139,7 +139,6 @@
       <change beforePath="$PROJECT_DIR$/../wamplangues/index_portuguese.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../wamplangues/index_romanian.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../wamplangues/index_turkish.php" beforeDir="false" />
->>>>>>> 499ad228a9878b12738f19b7ae41d46721faeb2e
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +151,6 @@
       <phar pharPath="C:\wamp64\www\sprint_web-eyaaa\tunfugees\composer_2.phar" interpreterId="72354a64-6df8-492b-bb75-29f508b3ddfd" />
     </execution>
   </component>
-<<<<<<< HEAD
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
     <option name="GROUP_DATA_SOURCES" value="true" />
@@ -179,6 +177,7 @@
         <option value="C:\wamp64\www\tunfugees\.idea" />
       </set>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/sprint_web" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -273,6 +272,14 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Maddox_heart2hold" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -303,6 +310,8 @@
     <option name="myCommands">
       <command value="c dump-autoload" />
       <command value="s generate:bundle " />
+      <command value="s generate:bundle" />
+      <command value="s doctrine:generate:entity" />
       <command value="s doctrine:mapping:import --force ProduitBundle annotation" />
       <command value="s doctrine:cache:delete" />
       <command value=" composer require vich/uploader-bundle" />
@@ -352,7 +361,6 @@
       <command value="php bin/console assets:install --symlink web" />
       <command value="c require adesigns/calendar-bundle " />
       <command value=" php bin/console assets:install web " />
-=======
       <command value="curl -sS https://getcomposer.org/installer | php    " />
       <command value="php composer.phar install" />
       <command value="s doctrine:generate:entity" />
@@ -400,7 +408,6 @@
       <command value="s generate:controller" />
       <command value="wkhtmltopdf" />
       <command value="s doctrine:schema:update --dump-sql" />
->>>>>>> 499ad228a9878b12738f19b7ae41d46721faeb2e
       <command value="s doctrine:schema:update --force" />
       <command value="composer require knplabs/knp-snappy-bundle" />
       <command value="php composer require knplabs/knp-snappy-bundle" />
@@ -414,11 +421,46 @@
       <method v="2" />
     </configuration>
     <configuration name="Refugies.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/RefugiesBundle/Entity/Refugies.php">
+      <command value="php composer.phar update" />
+      <command value="php composer.phar install " />
+      <command value="s doctrine:schema:update --force" />
+      <command value="s doctrine:database:create" />
+      <command value="php bin/console server:run" />
+      <command value="doctrine schema update " />
+      <command value="doctrine database create " />
+      <command value="s generate:bundle " />
+      <command value="php bin/console doctrine:generate:entity" />
+      <command value="s doctrine:generate:form" />
+      <command value="php bin/console doctrine:generate:form" />
+      <command value="php bin/console doctrine:generate:form categstock" />
+      <command value="php bin/console doctrine:generate:form MessageBundle:categstock" />
+      <command value="composer require &quot;swiftmailer/swiftmailer:^6.0&quot;" />
+      <command value="php bin/console composer require &quot;swiftmailer/swiftmailer:^6.0&quot;" />
+      <command value="php bin/composer require &quot;swiftmailer/swiftmailer:^6.0&quot;" />
+      <command value="php bin/console  composer require symfony/swiftmailer-bundle " />
+      <command value="php bin/console composer require symfony/swiftmailer-bundle " />
+      <command value="php bin/composer require symfony/swiftmailer-bundle " />
+      <command value=" composer require symfony/swiftmailer-bundle " />
+      <command value="php bin/console generate:doctrine:form MessageBundle:stock" />
+      <command value=" php bin/console doctrine:schema:update --force " />
+      <command value="composer require knplabs/knp-snappy-bundle  " />
+      <command value="php bin/console server:run " />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="tunfugees" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner directory="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="PHP Script.Refugies.php" />
+        <item itemvalue="PHPUnit.tunfugees" />
       </list>
     </recent_temporary>
   </component>
@@ -491,6 +533,27 @@
       <workItem from="1586770659420" duration="7503000" />
       <workItem from="1586940762658" duration="1849000" />
       <workItem from="1586943544459" duration="36000" />
+      <workItem from="1585377290599" duration="4914000" />
+      <workItem from="1585483409806" duration="1290000" />
+      <workItem from="1585494013779" duration="1403000" />
+      <workItem from="1585502973005" duration="1995000" />
+      <workItem from="1585547467112" duration="21006000" />
+      <workItem from="1585590803577" duration="7897000" />
+      <workItem from="1585678462900" duration="11262000" />
+      <workItem from="1585844029358" duration="600000" />
+      <workItem from="1585898928999" duration="778000" />
+      <workItem from="1585978790972" duration="6816000" />
+      <workItem from="1586007610580" duration="13711000" />
+      <workItem from="1586078520883" duration="20816000" />
+      <workItem from="1586419731378" duration="2467000" />
+      <workItem from="1586540589314" duration="746000" />
+      <workItem from="1586585788818" duration="774000" />
+      <workItem from="1586597807589" duration="24402000" />
+      <workItem from="1586694371628" duration="15577000" />
+      <workItem from="1586725487861" duration="7161000" />
+      <workItem from="1586877465083" duration="10186000" />
+      <workItem from="1586893924814" duration="882000" />
+      <workItem from="1586895980019" duration="2386000" />
     </task>
     <servers />
   </component>
@@ -535,6 +598,18 @@
     <state x="449" y="168" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1585346255451" />
     <state x="443" y="85" key="#com.intellij.ide.util.MemberChooser" timestamp="1586347871179">
       <screen x="0" y="0" width="1272" height="768" />
+    <state x="449" y="168" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1585697899931" />
+    <state x="476" y="81" key="#com.intellij.ide.util.MemberChooser" timestamp="1585712668695">
+    <state x="263" y="19" key="#Test_Frameworks" timestamp="1585386380435">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="263" y="19" key="#Test_Frameworks/0.0.1366.728@0.0.1366.728" timestamp="1585386380435" />
+    <state x="449" y="168" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585569158286">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="449" y="168" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1585569158286" />
+    <state x="476" y="81" key="#com.intellij.ide.util.MemberChooser" timestamp="1585359128086">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="441" y="85" key="#com.intellij.ide.util.MemberChooser/0.0.1265.768@0.0.1265.768" timestamp="1585703456452" />
     <state x="443" y="85" key="#com.intellij.ide.util.MemberChooser/0.0.1272.768@0.0.1272.768" timestamp="1586347871179" />
@@ -574,7 +649,6 @@
     <state width="1323" height="2" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586874458664" />
     <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1585706909573">
       <screen x="0" y="0" width="1366" height="728" />
->>>>>>> 499ad228a9878b12738f19b7ae41d46721faeb2e
     </state>
     <state x="381" y="127" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1262.768@0.0.1262.768" timestamp="1586181715548" />
     <state x="382" y="127" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1265.768@0.0.1265.768" timestamp="1585705289321" />
@@ -640,10 +714,8 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="517" y="288" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1585372997533" />
-<<<<<<< HEAD
     <state x="31" y="7" width="1241" height="713" key="SettingsEditor" timestamp="1586770484089">
       <screen x="0" y="0" width="1272" height="768" />
-=======
     <state x="184" y="7" key="SettingsEditor" timestamp="1586873959910">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -674,7 +746,6 @@
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1586453873425" />
     <state x="184" y="7" key="SettingsEditor" timestamp="1586133578201">
       <screen x="0" y="0" width="1366" height="728" />
->>>>>>> 499ad228a9878b12738f19b7ae41d46721faeb2e
     </state>
     <state x="170" y="7" key="SettingsEditor/0.0.1265.768@0.0.1265.768" timestamp="1585693411055" />
     <state x="31" y="7" width="1241" height="713" key="SettingsEditor/0.0.1272.768@0.0.1272.768" timestamp="1586770484089" />
@@ -712,5 +783,73 @@
     </state>
     <state x="295" y="89" key="search.everywhere.popup/0.0.1265.768@0.0.1265.768" timestamp="1585658802785" />
     <state x="297" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1272.768@0.0.1272.768" timestamp="1586531684699" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1585627780015" />
+    <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586688249524">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1586688249524" />
+    <state x="367" y="1" width="646" height="725" key="#tunfugees" timestamp="1585386361147">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="367" y="1" width="646" height="725" key="#tunfugees/0.0.1366.728@0.0.1366.728" timestamp="1585386361147" />
+    <state x="407" y="243" key="ComposerCompositePathDialog" timestamp="1586717787601">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="407" y="243" key="ComposerCompositePathDialog/0.0.1366.728@0.0.1366.728" timestamp="1586717787601" />
+    <state x="890" y="103" key="FileChooserDialogImpl" timestamp="1586703914846">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="890" y="103" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586703914846" />
+    <state x="505" y="280" key="Github.CreateGistDialog" timestamp="1585598897398">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="505" y="280" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1585598897398" />
+    <state width="1367" height="162" key="GridCell.Tab.0.bottom" timestamp="1586899873543">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1367" height="162" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586899873543" />
+    <state width="1367" height="162" key="GridCell.Tab.0.center" timestamp="1586899873543">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1367" height="162" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586899873543" />
+    <state width="1367" height="162" key="GridCell.Tab.0.left" timestamp="1586899873543">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1367" height="162" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586899873543" />
+    <state width="1367" height="162" key="GridCell.Tab.0.right" timestamp="1586899873543">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1367" height="162" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586899873543" />
+    <state x="517" y="288" key="NewPhpFileDialog" timestamp="1585551796602">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="517" y="288" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1585551796602" />
+    <state x="184" y="7" key="SettingsEditor" timestamp="1586717791349">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586717791349" />
+    <state x="450" y="267" key="SymfonyPathDialog" timestamp="1585483455587">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="450" y="267" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1585483455587" />
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1585154082808">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585154082808" />
+    <state x="603" y="161" width="672" height="677" key="run.anything.popup" timestamp="1586898746459">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="603" y="161" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586898746459" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/MessageBundle/Resources/views/message/addCateg.html.twig</url>
+          <line>45</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
