@@ -9,6 +9,14 @@ user:
     resource: "@UserBundle/Controller"
     type : annotation
     prefix:   /
+refugies:
+    resource: "@RefugiesBundle/Controller"
+    type: annotation
+    prefix:   /
+Camps:
+    resource: "@CampsBundle/Controller"
+    type: annotation
+    prefix:   /
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
@@ -24,3 +32,4 @@ fos_js_routing:
 
 adesigns_calendar:
     resource: "@ADesignsCalendarBundle/Resources/config/routing.xml"
+
