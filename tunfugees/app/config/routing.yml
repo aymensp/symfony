@@ -1,3 +1,5 @@
+
+
 produit:
     resource: "@ProduitBundle/Controller/Front"
     type: annotation
@@ -13,3 +15,12 @@ fos_user:
 app:
     resource: '@ProduitBundle/Controller/'
     type: annotation
+event:
+    resource: "@EventBundle/Resources/config/routing.yml"
+    prefix:   /
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+adesigns_calendar:
+    resource: "@ADesignsCalendarBundle/Resources/config/routing.xml"

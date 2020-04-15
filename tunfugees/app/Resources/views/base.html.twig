@@ -132,8 +132,8 @@
                                         <div class="dropdown-menu">
                                             <div class="dropdown-inner">
                                                 <ul class="list-unstyled">
-                                                    <li><a href="index-2.html">Homepage 1</a></li>
-                                                    <li><a href="header2.html">Homepage 2</a></li>
+                                                    <li><a href="{{ path('CalendarHome') }}">Homepage 1</a></li>
+                                                    <li><a href="{{ path('CalendarHome') }}">Homepage 2</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -153,7 +153,7 @@
                                         <div class="dropdown-menu repeating">
                                             <div class="dropdown-inner">
                                                 <ul class="list-unstyled">
-                                                    <li><a href="our-events.html">Our Events</a></li>
+                                                    <li><a href="{{ path('event') }}">Our Events</a></li>
                                                     <li><a href="single-event-view.html">Single Event View</a></li>
                                                 </ul>
                                             </div>
@@ -228,8 +228,8 @@
                         </div>
                         {% else %}
 
-                        <button type="button" class="btn btn-default btn-lg" onclick="location.href=' {{ path('fos_user_security_login') }}'">Donate Now <i class="icon_like_alt" aria-hidden="true"></i></button>
-                        <button type="button" class="btn btn-primary btn-lg" onclick="location.href=' {{ path('inscription') }}'">Become Volunter </button>
+                        <button type="button" class="btn btn-default btn-lg" onclick="location.href=' {{ path('fos_user_security_login') }}'">Log In <i class="icon_like_alt" aria-hidden="true"></i></button>
+                        <button type="button" class="btn btn-primary btn-lg" onclick="location.href=' {{ path('inscription') }}'">Sign up </button>
                         {% endif %}
                     </div>
                 </div>
@@ -322,7 +322,7 @@
                     </div>
                     <div class="col-sm-6 col-xs-12 text-right">
                         <ul class="list-inline">
-                            <li><a href="index-2.html">Home</a></li>
+                            <li><a href="{{ path('CalendarHome') }}">Home</a></li>
                             <li><a href="our-causes.html">Causes</a></li>
                             <li><a href="our-events.html">Events</a></li>
                             <li><a href="shop.html">Shop</a></li>
