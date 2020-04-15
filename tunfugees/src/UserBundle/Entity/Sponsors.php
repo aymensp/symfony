@@ -19,7 +19,7 @@ class Sponsors
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $idsponsor;
+    private $idspon;
 
     /**
      * @var string

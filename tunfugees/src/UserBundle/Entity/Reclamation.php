@@ -19,7 +19,7 @@ class Reclamation
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $id;
+    private $idRec;
 
     /**
      * @var string
